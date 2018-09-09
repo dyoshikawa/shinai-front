@@ -31,7 +31,8 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    cssSourceMap: false
   },
   modules: ['bootstrap-vue/nuxt']
 }
