@@ -112,6 +112,10 @@
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.8.tgz#38a936b60b898a1ad0f3719543ff1a1031f60f8b"
 
+"@fortawesome/fontawesome-free-webfonts@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-webfonts/-/fontawesome-free-webfonts-1.0.9.tgz#72f2c10453422aba0d338fa6a9cb761b50ba24d5"
+
 "@google-cloud/common@^0.17.0":
   version "0.17.0"
   resolved "http://registry.npmjs.org/@google-cloud/common/-/common-0.17.0.tgz#8ef558750db481fc10a13757a49479ab9a1c8c07"

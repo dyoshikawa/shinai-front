@@ -35,5 +35,11 @@ module.exports = {
     cssSourceMap: false
   },
   modules: ['bootstrap-vue/nuxt'],
-  css: ['@/assets/css/main.css']
+  css: [
+    '@/assets/css/main.css',
+    '@fortawesome/fontawesome-free-webfonts',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css'
+  ]
 }
