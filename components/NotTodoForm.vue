@@ -1,12 +1,6 @@
 <template>
   <div>
     <b-form-group>
-      <b-input
-        type="date"
-      />
-    </b-form-group>
-
-    <b-form-group>
       <b-input/>
     </b-form-group>
 

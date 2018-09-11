@@ -1,9 +1,11 @@
 <template>
-  <div>
+  <div class="all">
     <nav-bar/>
-
-    <div class="box-c box__bg_photo">
-    </div>
+    <b-container>
+      <div class="box-custom box__bg_photo">
+        <h1>Not Todo List</h1>
+      </div>
+    </b-container>
   </div>
 </template>
 
@@ -23,28 +25,45 @@ export default {
 </script>
 
 <style scoped>
-.box-c {
+.box-custom {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  display: flex; /* 要素をflexboxに対応させる */
+  align-items: center; /* 縦方向の中央揃え */
+  flex-direction: column; /* 子要素の並びを上から下にする（要素の改行に対応） */
 }
 
 .box__bg_photo {
   background-image: url('~/static/turtle.jpeg');
   background-size: cover;
   background-position: center;
+}
+
+h1 {
+  font-family: 'Gamja Flower', cursive;
+  font-size: 80px;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-family: 'Gamja Flower', cursive;
+    font-size: 50px;
+    margin-top: 0px;
+  }
+
+  .box-custom {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .box-custom {
+    height: 250px;
+  }
 }
 </style>

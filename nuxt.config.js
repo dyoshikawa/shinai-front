@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'shinai-list',
+    title: 'NotTodoList',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -34,5 +34,6 @@ module.exports = {
     },
     cssSourceMap: false
   },
-  modules: ['bootstrap-vue/nuxt']
+  modules: ['bootstrap-vue/nuxt'],
+  css: ['@/assets/css/main.css']
 }
