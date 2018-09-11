@@ -1,27 +1,29 @@
 <template>
   <div>
-    <nav-bar
-      variant="dark"
-    >
+    <nav-bar/>
 
-    </nav-bar>
-    <div class="box box__bg_photo">
+    <div class="box-c box__bg_photo">
     </div>
   </div>
 </template>
 
 <script>
 import NavBar from '~/components/NavBar'
+
 export default {
   components: {
     NavBar
+  },
+  async created() {
+    await this.$store.dispatch('user/fetch')
+    const a = this.$store.state.user.isLogin
+    console.log(a)
   }
 }
 </script>
 
 <style scoped>
-.box {
-  width: 100vw;
+.box-c {
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,11 +46,5 @@ export default {
   background-image: url('~/static/turtle.jpeg');
   background-size: cover;
   background-position: center;
-}
-
-.title-custom {
-  font-size: 100px;
-  -webkit-text-stroke: 3px #000;
-  color: white;
 }
 </style>

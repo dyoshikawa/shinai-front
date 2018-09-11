@@ -27,6 +27,8 @@ module.exports = {
         "semi": false,
         "singleQuote": true
       }
-    ]
+    ],
+    "no-console": 0,
+    "no-unused-labels": 0
   }
 }

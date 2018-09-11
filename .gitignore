@@ -13,3 +13,4 @@ dist
 .idea
 functions/node_modules
 functions/ssr
+config/config.js
