@@ -1,20 +1,20 @@
 <template>
-  <div>
-    <nav-bar
-      variant="dark"
-    >
-
-    </nav-bar>
-    <div class="box box__bg_photo">
-    </div>
+  <div class="box box__bg_photo">
+    <b-container>
+      <h1 class="title">
+        しないことリスト
+      </h1>
+      <shinai-form/>
+    </b-container>
   </div>
 </template>
 
 <script>
-import NavBar from '~/components/NavBar'
+import NotTodoForm from '~/components/NotTodoForm'
+
 export default {
   components: {
-    NavBar
+    NotTodoForm
   }
 }
 </script>
@@ -44,11 +44,5 @@ export default {
   background-image: url('~/static/turtle.jpeg');
   background-size: cover;
   background-position: center;
-}
-
-.title-custom {
-  font-size: 100px;
-  -webkit-text-stroke: 3px #000;
-  color: white;
 }
 </style>
