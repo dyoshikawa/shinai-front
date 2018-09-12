@@ -1,16 +1,39 @@
 <template>
   <div>
-    <b-form-group>
-      <b-input/>
-    </b-form-group>
+    <div
+      class="form-text mb-2"
+    >
+      わたしは、
+    </div>
+
+    <b-input
+      class="mb-2"
+    />
+
+    <div
+      class="form-text mb-2"
+    >
+      をしません。
+    </div>
 
     <b-button
       variant="primary"
     >
-      しません
+      登録
+      <img
+        src="~/static/turtle.png"
+        class="turtle"
+      >
     </b-button>
   </div>
 </template>
 
 <script>
 </script>
+
+<style scoped>
+.turtle {
+  margin-left: 2px;
+  height: 12px;
+}
+</style>
