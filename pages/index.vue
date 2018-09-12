@@ -51,7 +51,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 50px;
+    font-size: 45px;
     margin-top: 0px;
   }
   .box {
