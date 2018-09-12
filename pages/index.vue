@@ -1,9 +1,9 @@
 <template>
   <div>
-    <welcome
+    <home
       v-if="$store.state.user.isLogin"
     />
-    <home
+    <welcome
       v-else
     />
   </div>
