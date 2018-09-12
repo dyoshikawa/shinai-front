@@ -15,6 +15,7 @@
 <script>
 import NavBar from '~/components/NavBar'
 import LoginButtons from '~/components/LoginButtons'
+import auth from '~/plugins/auth'
 
 export default {
   components: {
@@ -25,6 +26,8 @@ export default {
     await this.$store.dispatch('user/fetch')
     const a = this.$store.state.user.isLogin
     console.log(a)
+    const b = await auth()
+    console.log(b)
   }
 }
 </script>
