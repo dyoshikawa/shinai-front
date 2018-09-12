@@ -4,7 +4,7 @@
       class="btn-twitter"
       variant="info"
     >
-      <i class="fab fa-twitter" />Login with Twitter
+      <i class="fab fa-twitter" />&nbsp;Login with Twitter
     </b-button>
   </div>
 </template>

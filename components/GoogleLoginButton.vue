@@ -3,7 +3,7 @@
     class="btn-google first-button"
     variant="danger"
   >
-    <i class="fab fa-google" />Login with Google
+    <i class="fab fa-google" />&nbsp;Login with Google
   </b-button>
 </template>
 
