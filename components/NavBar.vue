@@ -20,9 +20,9 @@
               <em>User</em>
             </template>
             <b-dropdown-item
-              @click="login"
+              @click="loginWithGoogle"
             >
-              Login
+              Login with Google
             </b-dropdown-item>
             <b-dropdown-item href="#">Signout</b-dropdown-item>
           </b-nav-item-dropdown>
@@ -34,13 +34,12 @@
 </template>
 
 <script>
-import firebase from '~/plugins/firebase'
+import { loginWithGoogle } from '~/plugins/auth'
 
 export default {
   methods: {
-    login() {
-      const provider = new firebase.auth.GoogleAuthProvider()
-      firebase.auth().signInWithRedirect(provider)
+    loginWithGoogle() {
+      loginWithGoogle()
     }
   }
 }

@@ -8,4 +8,10 @@ function auth() {
     })
   })
 }
+
+export function loginWithGoogle() {
+  const provider = new firebase.auth.GoogleAuthProvider()
+  firebase.auth().signInWithRedirect(provider)
+}
+
 export default auth
