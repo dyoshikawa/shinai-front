@@ -7,7 +7,7 @@
         <div id="login_buttons_box">
           <div id="login_buttons">
             <b-button
-              class="btn-google left-button"
+              class="btn-google first-button"
               variant="danger"
             >
               <i class="fab fa-google" />Login with Google
@@ -67,7 +67,7 @@ h1 {
   margin-top: 60px;
 }
 
-.left-button {
+.first-button {
   margin-right: 10px;
 }
 
@@ -109,11 +109,9 @@ h1 {
 
   #login_buttons_box {
     margin-top: 220px;
-    align-items: center;
-    flex-wrap: wrap;
   }
 
-  .left-button {
+  .first-button {
     margin-bottom: 10px;
   }
 
