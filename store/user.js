@@ -1,7 +1,7 @@
 import auth from '~/plugins/auth'
 
 export const state = () => ({
-  isLogin: false
+  isLogin: 'loading'
 })
 
 export const actions = {
@@ -12,6 +12,7 @@ export const actions = {
 
 export const mutations = {
   set(state, user) {
+    console.log(user)
     if (!user) {
       state.isLogin = false
     } else {

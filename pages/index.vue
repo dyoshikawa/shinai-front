@@ -1,7 +1,10 @@
 <template>
   <div>
+    <div
+      v-if="$store.state.user.isLogin === 'loading'"
+    ></div>
     <home
-      v-if="$store.state.user.isLogin"
+      v-else-if="$store.state.user.isLogin"
     />
     <welcome
       v-else
@@ -17,6 +20,9 @@ export default {
   components: {
     Welcome,
     Home
+  },
+  async created() {
+    this.$store.dispatch('user/fetch')
   }
 }
 </script>
