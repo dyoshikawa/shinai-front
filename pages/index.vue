@@ -2,26 +2,10 @@
   <div class="all">
     <nav-bar/>
     <b-container>
-      <div class="box-custom box__bg_photo">
+      <div class="box box-bg-photo">
         <h1>More important than todo</h1>
-        <div id="login_buttons_box">
-          <div id="login_buttons">
-            <b-button
-              class="btn-google first-button"
-              variant="danger"
-            >
-              <i class="fab fa-google" />Login with Google
-            </b-button>
-
-            <br class="br-sp">
-
-            <b-button
-              class="btn-twitter"
-              variant="info"
-            >
-              <i class="fab fa-twitter" />Login with Twitter
-            </b-button>
-          </div>
+        <div class="login-buttons-box">
+          <login-buttons/>
         </div>
       </div>
     </b-container>
@@ -30,9 +14,11 @@
 
 <script>
 import NavBar from '~/components/NavBar'
+import LoginButtons from '~/components/LoginButtons'
 
 export default {
   components: {
+    LoginButtons,
     NavBar
   },
   async created() {
@@ -44,21 +30,17 @@ export default {
 </script>
 
 <style scoped>
-.box-custom {
+.box {
   height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.box__bg_photo {
+.box-bg-photo {
   background-image: url('~/static/turtle.jpeg');
   background-size: cover;
   background-position: center;
-}
-
-.br-sp {
-  display: none;
 }
 
 h1 {
@@ -67,31 +49,16 @@ h1 {
   margin-top: 60px;
 }
 
-.first-button {
-  margin-right: 10px;
-}
-
-.btn-twitter {
-  background-color: #00aced;
-}
-
-.btn-google {
-  background-color: #dd4b39;
-}
-
 @media screen and (max-width: 768px) {
   h1 {
-    font-family: 'Gamja Flower', cursive;
     font-size: 50px;
     margin-top: 0px;
   }
-
-  .box-custom {
+  .box {
     width: 100%;
     height: 400px;
   }
-
-  #login_buttons_box {
+  .login-buttons-box {
     margin-top: 350px;
     align-items: center;
     flex-wrap: wrap;
@@ -102,21 +69,11 @@ h1 {
   h1 {
     font-size: 30px;
   }
-
-  .box-custom {
+  .box {
     height: 250px;
   }
-
-  #login_buttons_box {
+  .login-buttons-box {
     margin-top: 220px;
-  }
-
-  .first-button {
-    margin-bottom: 10px;
-  }
-
-  .br-sp {
-    display: block;
   }
 }
 </style>
