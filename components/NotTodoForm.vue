@@ -32,6 +32,10 @@
 </script>
 
 <style scoped>
+.form-text {
+  font-family: 'Gamja Flower', cursive;
+  font-size: 23px;
+}
 .turtle {
   margin-left: 2px;
   height: 12px;
