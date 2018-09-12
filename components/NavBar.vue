@@ -7,7 +7,7 @@
         href="#"
         class="navbar-brand-custom"
       >
-        NotTodoList
+        しないことリスト
       </b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">

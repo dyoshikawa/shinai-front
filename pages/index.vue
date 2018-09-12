@@ -3,7 +3,7 @@
     <nav-bar/>
     <b-container>
       <div class="box box-bg-photo">
-        <h1>More important than todo</h1>
+        <h1>More important than to do</h1>
         <div class="login-buttons-box">
           <login-buttons/>
         </div>
