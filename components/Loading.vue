@@ -26,7 +26,7 @@
   width: 100%;
 }
 .rotate-anime {
-  width: 60px;
+  width: 40px;
   animation: rotate-anime 3s linear infinite;
 }
 @keyframes rotate-anime {
