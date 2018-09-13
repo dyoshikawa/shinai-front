@@ -24,7 +24,11 @@
             >
               Login with Google
             </b-dropdown-item>
-            <b-dropdown-item href="#">Signout</b-dropdown-item>
+            <b-dropdown-item
+              @click="logout"
+            >
+              Logout
+            </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
 
@@ -34,12 +38,15 @@
 </template>
 
 <script>
-import { loginWithGoogle } from '~/plugins/auth'
+import { loginWithGoogle, logout } from '~/plugins/auth'
 
 export default {
   methods: {
     loginWithGoogle() {
       loginWithGoogle()
+    },
+    logout() {
+      logout(this.$store)
     }
   }
 }
