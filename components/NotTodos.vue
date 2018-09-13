@@ -1,5 +1,13 @@
 <template>
   <div>
+    <b-card
+      v-for="notTodo in notTodos"
+      :key="notTodo.id"
+    >
+      私は、
+      &nbsp;<b>{{ notTodo.content }}</b>&nbsp;
+      をしません。
+    </b-card>
   </div>
 </template>
 
@@ -8,7 +16,7 @@ export default {
   name: 'NotTodos',
 
   computed: {
-    tasks: this.$store.state.notTodos.list
+    notTodos: this.$store.state.notTodos.list
   }
 }
 </script>
