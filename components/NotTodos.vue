@@ -1,10 +1,15 @@
 <template>
-    
+  <div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'NotTodos'
+  name: 'NotTodos',
+
+  computed: {
+    tasks: this.$store.state.notTodos.list
+  }
 }
 </script>
 
