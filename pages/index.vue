@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div
+    <loading
       v-if="$store.state.user.isLogin === 'loading'"
-    ></div>
+    ></loading>
     <home
       v-else-if="$store.state.user.isLogin"
     />
@@ -15,11 +15,13 @@
 <script>
 import Welcome from '~/components/Welcome'
 import Home from '~/components/Home'
+import Loading from '~/components/Loading'
 
 export default {
   components: {
     Welcome,
-    Home
+    Home,
+    Loading
   },
   async created() {
     this.$store.dispatch('user/fetch')
