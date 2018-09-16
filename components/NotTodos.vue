@@ -16,7 +16,14 @@ export default {
   name: 'NotTodos',
 
   computed: {
-    notTodos: this.$store.state.notTodos.list
+    notTodos() {
+      return this.$store.state.notTodos.list
+    }
+  },
+
+  async created() {
+    console.log('a')
+    await this.$store.dispatch('notTodos/fetch')
   }
 }
 </script>

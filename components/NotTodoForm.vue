@@ -18,6 +18,7 @@
 
     <b-button
       variant="primary"
+      @click="register"
     >
       登録
       <img
@@ -29,6 +30,13 @@
 </template>
 
 <script>
+export default {
+  methods: {
+    async register() {
+      await this.$store.dispatch('notTodos/add')
+    }
+  }
+}
 </script>
 
 <style scoped>
