@@ -1,12 +1,14 @@
 import { fetchUserNotTodos, createNotTodo } from '~/plugins/api'
 
 export const state = () => ({
-  list: []
+  list: [],
+  totalCount: 0
 })
 
 export const actions = {
-  async fetch({ commit, rootState }) {
-    const { data } = await fetchUserNotTodos(rootState.user.jwt)
+  async fetch({ commit, rootState }, page) {
+    const jwt = rootState.user.jwt
+    const { data } = await fetchUserNotTodos(jwt, page)
     console.log(data)
 
     commit('set', data)
@@ -24,8 +26,10 @@ export const actions = {
 }
 
 export const mutations = {
-  set(state, notTodos) {
-    console.log(notTodos)
-    state.list = notTodos
+  set(state, { records, total_record }) {
+    console.log(records)
+    console.log(total_record)
+    state.list = records
+    state.totalCount = total_record
   }
 }

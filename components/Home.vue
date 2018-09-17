@@ -2,7 +2,11 @@
   <div class="box box-bg-photo">
     <nav-bar></nav-bar>
     <b-container>
-      <not-todo-form/>
+      <div
+        class="mb-3"
+      >
+        <not-todo-form/>
+      </div>
       <not-todos/>
     </b-container>
   </div>

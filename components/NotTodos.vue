@@ -1,10 +1,18 @@
 <template>
   <div>
+    <b-pagination
+      size="md"
+      :total-rows="totalCount"
+      :per-page="3"
+      @change="changePage($event)"
+    />
+
     <b-card
       v-for="notTodo in notTodos"
       :key="notTodo.id"
+      class="mb-2"
     >
-      私は、
+      わたしは
       &nbsp;<b>{{ notTodo.content }}</b>&nbsp;
       をしません。
     </b-card>
@@ -18,12 +26,21 @@ export default {
   computed: {
     notTodos() {
       return this.$store.state.notTodos.list
+    },
+    totalCount() {
+      return this.$store.state.notTodos.totalCount
     }
   },
 
   async created() {
-    console.log('a')
-    await this.$store.dispatch('notTodos/fetch')
+    await this.$store.dispatch('notTodos/fetch', 1)
+  },
+
+  methods: {
+    async changePage(page) {
+      console.log(page)
+      await this.$store.dispatch('notTodos/fetch', page)
+    }
   }
 }
 </script>
