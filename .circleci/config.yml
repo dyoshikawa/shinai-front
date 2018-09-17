@@ -13,7 +13,7 @@ jobs:
       - run:
           name: firebase deploy
           command: |
-            cp config/config.staging.js config.js && \
+            cp config/config.staging.js config/config.js && \
             yarn deploy --project "shinai-list-development" --token "$FIREBASE_TOKEN"
 
 
