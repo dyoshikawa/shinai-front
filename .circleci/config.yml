@@ -7,6 +7,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: install firebase-tools
+          command: |
+            yarn global add firebase-tools
+      - run:
           name: yarn install
           command: |
             yarn
