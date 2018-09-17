@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  deployment:
+    docker:
+      - image: circleci/node:latest
+
+    steps:
+      - checkout
+      - run:
+        name: cp config.js
+        command: |
+          cp config/config.staging.js config.js
+      - run:
+        name: yarn install
+        command: |
+          yarn
+      - run:
+        name: firebase deploy
+        command: |
+          yarn deploy --project "shinai-list-development" --token "$FIREBASE_TOKEN"
+
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
