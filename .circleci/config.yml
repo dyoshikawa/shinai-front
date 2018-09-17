@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  deployment:
+  build:
     docker:
       - image: circleci/node:latest
 
