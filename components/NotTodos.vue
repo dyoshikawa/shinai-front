@@ -1,11 +1,13 @@
 <template>
   <div>
-    <b-pagination
-      size="md"
-      :total-rows="totalCount"
-      :per-page="perPage"
-      @change="changePage($event)"
-    />
+    <template v-if="totalCount > 0">
+      <b-pagination
+        size="md"
+        :total-rows="totalCount"
+        :per-page="perPage"
+        @change="changePage($event)"
+      />
+    </template>
 
     <b-card
       v-for="notTodo in notTodos"

@@ -2,7 +2,8 @@ import { fetchUserNotTodos, createNotTodo } from '~/plugins/api'
 
 export const state = () => ({
   list: [],
-  totalCount: 0
+  totalCount: 0,
+  perPage: 10
 })
 
 export const actions = {
@@ -29,6 +30,7 @@ export const mutations = {
   set(state, { records, total_record, limit }) {
     console.log(records)
     console.log(total_record)
+    console.log(limit)
     state.list = records
     state.totalCount = total_record
     state.perPage = limit
