@@ -3,7 +3,7 @@
     <b-pagination
       size="md"
       :total-rows="totalCount"
-      :per-page="3"
+      :per-page="perPage"
       @change="changePage($event)"
     />
 
@@ -29,6 +29,9 @@ export default {
     },
     totalCount() {
       return this.$store.state.notTodos.totalCount
+    },
+    perPage() {
+      return this.$store.state.notTodos.perPage
     }
   },
 

@@ -26,10 +26,11 @@ export const actions = {
 }
 
 export const mutations = {
-  set(state, { records, total_record }) {
+  set(state, { records, total_record, limit }) {
     console.log(records)
     console.log(total_record)
     state.list = records
     state.totalCount = total_record
+    state.perPage = limit
   }
 }
