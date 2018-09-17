@@ -16,9 +16,7 @@ export const fetchUserNotTodos = async jwt => {
   return await api.get(`${apiUrl}/users/self/tasks`)
 }
 
-export const createNotTodo = async jwt => {
+export const createNotTodo = async (jwt, body) => {
   const api = apiWrapper(jwt)
-  return await api.post(`${apiUrl}/tasks`, {
-    content: 'aaa'
-  })
+  return await api.post(`${apiUrl}/tasks`, body)
 }

@@ -8,6 +8,7 @@
 
     <b-input
       class="mb-2"
+      v-model="content"
     />
 
     <div
@@ -31,9 +32,14 @@
 
 <script>
 export default {
+  data() {
+    return { content: '' }
+  },
   methods: {
     async register() {
-      await this.$store.dispatch('notTodos/add')
+      const body = { content: this.content }
+      await this.$store.dispatch('notTodos/add', body)
+      this.content = ''
     }
   }
 }

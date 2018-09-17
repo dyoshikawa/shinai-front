@@ -6,16 +6,19 @@ export const state = () => ({
 
 export const actions = {
   async fetch({ commit, rootState }) {
-    console.log(rootState)
     const { data } = await fetchUserNotTodos(rootState.user.jwt)
     console.log(data)
+
     commit('set', data)
   },
-  async add({ commit, rootState }) {
+  async add({ commit, rootState }, body) {
     const jwt = rootState.user.jwt
-    await createNotTodo(jwt)
+
+    await createNotTodo(jwt, body)
+
     const { data } = await fetchUserNotTodos(jwt)
     console.log(data)
+
     commit('set', data)
   }
 }
