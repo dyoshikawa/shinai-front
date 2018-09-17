@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/node:latest
 
-    steps:
+    step:
       - checkout
       - run:
         name: cp config.js
