@@ -1,5 +1,5 @@
 <template>
-  <div class="all">
+  <div>
     <nav-bar/>
     <b-container>
       <div class="box box-bg-photo">

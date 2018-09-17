@@ -19,16 +19,22 @@
             <template slot="button-content">
               <em>User</em>
             </template>
-            <b-dropdown-item
-              @click="loginWithGoogle"
-            >
-              Login with Google
-            </b-dropdown-item>
-            <b-dropdown-item
-              @click="logout"
-            >
-              Logout
-            </b-dropdown-item>
+
+            <template v-if="isLogin">
+              <b-dropdown-item
+                @click="logout"
+              >
+                Logout
+              </b-dropdown-item>
+            </template>
+            <template v-else>
+              <b-dropdown-item
+                @click="loginWithGoogle"
+              >
+                Login with Google
+              </b-dropdown-item>
+            </template>
+
           </b-nav-item-dropdown>
         </b-navbar-nav>
 
@@ -41,6 +47,12 @@
 import { loginWithGoogle, logout } from '~/plugins/auth'
 
 export default {
+  computed: {
+    isLogin() {
+      return this.$store.state.user.isLogin
+    }
+  },
+
   methods: {
     loginWithGoogle() {
       loginWithGoogle()
