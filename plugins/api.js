@@ -11,13 +11,13 @@ const apiWrapper = jwt => {
   })
 }
 
-export const fetchUserNotTodos = async (jwt, page) => {
+export const fetchUserTasks = async (jwt, page) => {
   const api = apiWrapper(jwt)
   console.log(page)
   return await api.get(`${apiUrl}/users/self/tasks?page=${page}`)
 }
 
-export const createNotTodo = async (jwt, body) => {
+export const createTask = async (jwt, body) => {
   const api = apiWrapper(jwt)
   return await api.post(`${apiUrl}/tasks`, body)
 }

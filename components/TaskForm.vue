@@ -38,7 +38,7 @@ export default {
   methods: {
     async register() {
       const body = { content: this.content }
-      await this.$store.dispatch('notTodos/add', body)
+      await this.$store.dispatch('tasks/add', body)
       this.content = ''
     }
   }

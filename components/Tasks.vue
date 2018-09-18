@@ -10,12 +10,12 @@
     </template>
 
     <b-card
-      v-for="notTodo in notTodos"
-      :key="notTodo.id"
+      v-for="task in tasks"
+      :key="task.id"
       class="mb-2"
     >
       わたしは
-      &nbsp;<b>{{ notTodo.content }}</b>&nbsp;
+      &nbsp;<b>{{ task.content }}</b>&nbsp;
       をしません。
     </b-card>
   </div>
@@ -23,28 +23,26 @@
 
 <script>
 export default {
-  name: 'NotTodos',
-
   computed: {
-    notTodos() {
-      return this.$store.state.notTodos.list
+    tasks() {
+      return this.$store.state.tasks.list
     },
     totalCount() {
-      return this.$store.state.notTodos.totalCount
+      return this.$store.state.tasks.totalCount
     },
     perPage() {
-      return this.$store.state.notTodos.perPage
+      return this.$store.state.tasks.perPage
     }
   },
 
   async created() {
-    await this.$store.dispatch('notTodos/fetch', 1)
+    await this.$store.dispatch('tasks/fetch', 1)
   },
 
   methods: {
     async changePage(page) {
       console.log(page)
-      await this.$store.dispatch('notTodos/fetch', page)
+      await this.$store.dispatch('tasks/fetch', page)
     }
   }
 }

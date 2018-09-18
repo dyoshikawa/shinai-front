@@ -1,4 +1,4 @@
-import { fetchUserNotTodos, createNotTodo } from '~/plugins/api'
+import { fetchUserTasks, createTask } from '~/plugins/api'
 
 export const state = () => ({
   list: [],
@@ -9,7 +9,7 @@ export const state = () => ({
 export const actions = {
   async fetch({ commit, rootState }, page) {
     const jwt = rootState.user.jwt
-    const { data } = await fetchUserNotTodos(jwt, page)
+    const { data } = await fetchUserTasks(jwt, page)
     console.log(data)
 
     commit('set', data)
@@ -17,9 +17,9 @@ export const actions = {
   async add({ commit, rootState }, body) {
     const jwt = rootState.user.jwt
 
-    await createNotTodo(jwt, body)
+    await createTask(jwt, body)
 
-    const { data } = await fetchUserNotTodos(jwt)
+    const { data } = await fetchUserTasks(jwt)
     console.log(data)
 
     commit('set', data)

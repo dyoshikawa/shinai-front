@@ -13,15 +13,15 @@
 </template>
 
 <script>
-import NotTodoForm from '~/components/NotTodoForm'
+import TaskForm from '~/components/TaskForm'
 import NavBar from '~/components/NavBar'
-import NotTodos from '~/components/NotTodos'
+import Tasks from '~/components/Tasks'
 
 export default {
   components: {
-    NotTodos,
+    Tasks,
     NavBar,
-    NotTodoForm
+    TaskForm
   }
 }
 </script>
