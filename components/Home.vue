@@ -5,9 +5,9 @@
       <div
         class="mb-3"
       >
-        <not-todo-form/>
+        <task-form/>
       </div>
-      <not-todos/>
+      <Tasks/>
     </b-container>
   </div>
 </template>
