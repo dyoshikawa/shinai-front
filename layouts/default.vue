@@ -1,12 +1,7 @@
 <template>
   <div>
-    <Loading
-      v-if="$store.state.user.isLogin === 'loading'"
-    />
-    <template v-else>
-      <nav-bar/>
-      <nuxt/>
-    </template>
+    <nav-bar/>
+    <nuxt/>
   </div>
 </template>
 

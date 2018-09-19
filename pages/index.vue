@@ -1,7 +1,10 @@
 <template>
   <div>
+    <Loading
+      v-if="$store.state.user.isLogin === 'loading'"
+    />
     <Home
-      v-if="$store.state.user.isLogin"
+      v-else-if="$store.state.user.isLogin"
     />
     <Welcome
       v-else

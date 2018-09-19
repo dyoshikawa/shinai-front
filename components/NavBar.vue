@@ -25,8 +25,14 @@
             <!-- Using button-content slot -->
             <template slot="button-content">
               <Avatar
+                v-if="isLogin"
                 :url="avatar"
               />
+              <template
+                v-else
+              >
+                 Login
+              </template>
             </template>
 
             <template v-if="isLogin">
