@@ -14,6 +14,12 @@
       :key="task.id"
       class="mb-2"
     >
+      <b-img
+        :src="task.user.avatar"
+        fluid
+        rounded="circle"
+        class="avatar"
+      />
       わたしは
       &nbsp;<b>{{ task.content }}</b>&nbsp;
       をしません。
@@ -38,4 +44,7 @@ export default {
 </script>
 
 <style scoped>
+.avatar {
+  width: 40px;
+}
 </style>
