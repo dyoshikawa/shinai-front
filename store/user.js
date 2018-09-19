@@ -2,7 +2,8 @@ import auth from '~/plugins/auth'
 
 export const state = () => ({
   isLogin: 'loading',
-  jwt: ''
+  jwt: '',
+  avatar: ''
 })
 
 export const actions = {
@@ -19,7 +20,7 @@ export const mutations = {
     } else {
       state.isLogin = true
       state.jwt = user.qa
-      localStorage.setItem('jwt', user.qa)
+      state.avatar = user.photoURL
     }
   }
 }

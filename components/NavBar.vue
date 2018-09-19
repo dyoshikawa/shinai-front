@@ -24,7 +24,9 @@
           <b-nav-item-dropdown right>
             <!-- Using button-content slot -->
             <template slot="button-content">
-              <em>User</em>
+              <Avatar
+                :url="avatar"
+              />
             </template>
 
             <template v-if="isLogin">
@@ -52,11 +54,19 @@
 
 <script>
 import { loginWithGoogle, logout } from '~/plugins/auth'
+import Avatar from '~/components/Avatar'
 
 export default {
+  components: {
+    Avatar
+  },
+
   computed: {
     isLogin() {
       return this.$store.state.user.isLogin
+    },
+    avatar() {
+      return this.$store.state.user.avatar
     }
   },
 

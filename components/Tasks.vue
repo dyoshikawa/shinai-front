@@ -14,11 +14,8 @@
       :key="task.id"
       class="mb-2"
     >
-      <b-img
-        :src="task.user.avatar"
-        fluid
-        rounded="circle"
-        class="avatar"
+      <Avatar
+        :url="task.user.avatar"
       />
       わたしは
       &nbsp;<b>{{ task.content }}</b>&nbsp;
@@ -28,7 +25,10 @@
 </template>
 
 <script>
+import Avatar from '~/components/Avatar'
+
 export default {
+  components: { Avatar },
   computed: {
     tasks() {
       return this.$store.state.tasks.list
@@ -44,7 +44,4 @@ export default {
 </script>
 
 <style scoped>
-.avatar {
-  width: 40px;
-}
 </style>
