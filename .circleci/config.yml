@@ -19,8 +19,7 @@ jobs:
           name: firebase deploy
           command: |
             cp config/config.staging.js config/config.js && \
-            yarn deploy --project "shinai-list-development" --token "$FIREBASE_TOKEN"
-
+            yarn deploy --project "shinai-staging" --token "$FIREBASE_TOKEN"
 
 workflows:
   version: 2
