@@ -11,10 +11,10 @@ const apiWrapper = jwt => {
   })
 }
 
-export const fetchUserTasks = async (jwt, page) => {
+export const fetchAuthUserTasks = async (jwt, page) => {
   const api = apiWrapper(jwt)
   console.log(page)
-  return await api.get(`${apiUrl}/users/self/tasks?page=${page}`)
+  return await api.get(`${apiUrl}/self/tasks?page=${page}`)
 }
 
 export const fetchTimelineTasks = async (jwt, page) => {

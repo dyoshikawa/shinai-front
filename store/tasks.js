@@ -1,4 +1,4 @@
-import { fetchUserTasks, fetchTimelineTasks, createTask } from '~/plugins/api'
+import { fetchAuthUserTasks, fetchTimelineTasks, createTask } from '~/plugins/api'
 
 export const state = () => ({
   list: [],
@@ -9,7 +9,7 @@ export const state = () => ({
 export const actions = {
   async fetch({ commit, rootState }, page) {
     const jwt = rootState.user.jwt
-    const { data } = await fetchUserTasks(jwt, page)
+    const { data } = await fetchAuthUserTasks(jwt, page)
     console.log(data)
 
     commit('set', data)
@@ -26,7 +26,7 @@ export const actions = {
 
     await createTask(jwt, body)
 
-    const { data } = await fetchUserTasks(jwt)
+    const { data } = await fetchAuthUserTasks(jwt)
     console.log(data)
 
     commit('set', data)
