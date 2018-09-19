@@ -7,13 +7,11 @@
 </template>
 
 <script>
-import Loading from '~/components/Loading'
 import TimelineTasks from '~/components/TimelineTasks'
 
 export default {
   components: {
-    TimelineTasks,
-    Loading
+    TimelineTasks
   }
 }
 </script>
