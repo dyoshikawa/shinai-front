@@ -1,13 +1,12 @@
 <template>
   <div class="box box-bg-photo">
-    <nav-bar></nav-bar>
     <b-container>
       <div
         class="mb-3"
       >
         <task-form/>
       </div>
-      <Tasks/>
+      <auth-user-tasks/>
     </b-container>
   </div>
 </template>
@@ -15,11 +14,11 @@
 <script>
 import TaskForm from '~/components/TaskForm'
 import NavBar from '~/components/NavBar'
-import Tasks from '~/components/Tasks'
+import AuthUserTasks from '~/components/AuthUserTasks'
 
 export default {
   components: {
-    Tasks,
+    AuthUserTasks,
     NavBar,
     TaskForm
   }
