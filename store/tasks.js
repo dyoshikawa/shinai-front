@@ -1,4 +1,8 @@
-import { fetchAuthUserTasks, fetchTimelineTasks, createTask } from '~/plugins/api'
+import {
+  fetchAuthUserTasks,
+  fetchTimelineTasks,
+  createTask
+} from '~/plugins/api'
 
 export const state = () => ({
   list: [],
