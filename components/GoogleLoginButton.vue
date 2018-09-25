@@ -17,8 +17,8 @@ export default {
   methods: {
     login() {
       loginWithGoogle()
-    }
-  }
+    },
+  },
 }
 </script>
 

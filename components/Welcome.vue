@@ -16,8 +16,8 @@ import LoginButtons from '~/components/LoginButtons'
 export default {
   components: {
     LoginButtons,
-    NavBar
-  }
+    NavBar,
+  },
 }
 </script>
 

@@ -14,6 +14,11 @@ export function loginWithGoogle() {
   firebase.auth().signInWithRedirect(provider)
 }
 
+export function loginWithTwitter() {
+  const provider = new firebase.auth.TwitterAuthProvider()
+  firebase.auth().signInWithRedirect(provider)
+}
+
 export async function logout(store) {
   await firebase.auth().signOut()
   store.commit('user/set', false)

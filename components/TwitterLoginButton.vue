@@ -3,7 +3,6 @@
     <b-button
       class="btn-twitter"
       variant="info"
-      disabled
     >
       <i class="fab fa-twitter" />&nbsp;Login with Twitter
     </b-button>
@@ -11,6 +10,15 @@
 </template>
 
 <script>
+import { loginWithTwitter } from '~/plugins/auth'
+
+export default {
+  methods: {
+    login() {
+      loginWithTwitter()
+    },
+  },
+}
 </script>
 
 <style scoped>

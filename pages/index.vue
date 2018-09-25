@@ -21,8 +21,8 @@ export default {
   components: {
     Welcome,
     Home,
-    Loading
-  }
+    Loading,
+  },
 }
 </script>
 
