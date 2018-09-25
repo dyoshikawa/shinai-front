@@ -15,9 +15,7 @@ export function loginWithGoogle() {
 }
 
 export function loginWithTwitter() {
-  console.log('twitter login')
   const provider = new firebase.auth.TwitterAuthProvider()
-  console.log('twitter login')
   firebase.auth().signInWithRedirect(provider)
 }
 

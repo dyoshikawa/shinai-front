@@ -3,6 +3,7 @@
     <b-button
       class="btn-twitter"
       variant="info"
+      @click="login"
     >
       <i class="fab fa-twitter" />&nbsp;Login with Twitter
     </b-button>
