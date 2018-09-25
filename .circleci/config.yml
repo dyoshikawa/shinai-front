@@ -31,24 +31,24 @@ jobs:
           yarn deploy --project "shinai-staging" --token "$FIREBASE_TOKEN"
 
     deploy_production:
-        docker:
-        - image: circleci/node:8-stretch-browsers
-        steps:
-        - checkout
-        - run:
-            name: install firebase-tools
-            command: |
-              yarn global add firebase-tools
-        - run:
-            name: yarn install
-            command: |
-              yarn
-              cd functions && yarn
-        - run:
-            name: firebase deploy
-            command: |
-              cp config/config.staging.js config/config.js && \
-              yarn deploy --project "shinai" --token "$FIREBASE_TOKEN"
+      docker:
+      - image: circleci/node:8-stretch-browsers
+      steps:
+      - checkout
+      - run:
+          name: install firebase-tools
+          command: |
+            yarn global add firebase-tools
+      - run:
+          name: yarn install
+          command: |
+            yarn
+            cd functions && yarn
+      - run:
+          name: firebase deploy
+          command: |
+            cp config/config.production.js config/config.js && \
+            yarn deploy --project "shinai" --token "$FIREBASE_TOKEN"
 
 workflows:
   version: 2
