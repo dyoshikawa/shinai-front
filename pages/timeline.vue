@@ -11,8 +11,8 @@ import TimelineTasks from '~/components/TimelineTasks'
 
 export default {
   components: {
-    TimelineTasks
-  }
+    TimelineTasks,
+  },
 }
 </script>
 

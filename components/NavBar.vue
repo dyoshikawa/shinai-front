@@ -64,7 +64,7 @@ import Avatar from '~/components/Avatar'
 
 export default {
   components: {
-    Avatar
+    Avatar,
   },
 
   computed: {
@@ -73,7 +73,7 @@ export default {
     },
     avatar() {
       return this.$store.state.user.avatar
-    }
+    },
   },
 
   methods: {
@@ -82,7 +82,7 @@ export default {
     },
     logout() {
       logout(this.$store)
-    }
-  }
+    },
+  },
 }
 </script>

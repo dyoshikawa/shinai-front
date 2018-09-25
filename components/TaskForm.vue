@@ -40,8 +40,8 @@ export default {
       const body = { content: this.content }
       await this.$store.dispatch('tasks/add', body)
       this.content = ''
-    }
-  }
+    },
+  },
 }
 </script>
 

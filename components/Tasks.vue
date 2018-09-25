@@ -38,8 +38,8 @@ export default {
     },
     perPage() {
       return this.$store.state.tasks.perPage
-    }
-  }
+    },
+  },
 }
 </script>
 

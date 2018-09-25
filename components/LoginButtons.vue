@@ -15,8 +15,8 @@ import TwitterLoginButton from '~/components/TwitterLoginButton'
 export default {
   components: {
     GoogleLoginButton,
-    TwitterLoginButton
-  }
+    TwitterLoginButton,
+  },
 }
 </script>
 

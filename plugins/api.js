@@ -7,8 +7,8 @@ const apiWrapper = jwt => {
     headers: {
       Authorization: `Bearer ${jwt}`,
       Accept: 'application/json',
-      'Content-Type': 'application/json'
-    }
+      'Content-Type': 'application/json',
+    },
   })
 }
 

@@ -20,8 +20,8 @@ export default {
   components: {
     AuthUserTasks,
     NavBar,
-    TaskForm
-  }
+    TaskForm,
+  },
 }
 </script>
 
