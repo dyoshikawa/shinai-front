@@ -48,7 +48,7 @@ jobs:
         name: firebase deploy
         command: |
           cp config/config.production.js config/config.js && \
-          yarn deploy --project "shinai" --token "$FIREBASE_TOKEN"
+          yarn deploy --project "shinai-11e78" --token "$FIREBASE_TOKEN"
 
 workflows:
   version: 2
