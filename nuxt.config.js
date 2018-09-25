@@ -10,10 +10,10 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: 'しないことを記録するリスト'
-      }
+        content: 'しないことを記録するリスト',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
   ** Customize the progress bar color
@@ -32,11 +32,11 @@ module.exports = {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
         })
       }
     },
-    cssSourceMap: false
+    cssSourceMap: false,
   },
   modules: ['bootstrap-vue/nuxt'],
   css: [
@@ -44,7 +44,6 @@ module.exports = {
     '@fortawesome/fontawesome-free-webfonts',
     '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
     '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
-    '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css'
+    '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css',
   ],
-  mode: 'spa'
 }
