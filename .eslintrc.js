@@ -25,7 +25,8 @@ module.exports = {
       "error",
       {
         "semi": false,
-        "singleQuote": true
+        "singleQuote": true,
+        "trailingComma": "es5"
       }
     ],
     "no-console": 0,
