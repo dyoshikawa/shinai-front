@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { apiUrl } from '~/config/config'
+import trace from '~/plugins/trace'
 
 const apiWrapper = jwt => {
   return axios.create({
@@ -13,13 +14,13 @@ const apiWrapper = jwt => {
 
 export const fetchAuthUserTasks = async (jwt, page) => {
   const api = apiWrapper(jwt)
-  console.log(page)
+  trace(page)
   return await api.get(`${apiUrl}/self/tasks?page=${page}`)
 }
 
 export const fetchTimelineTasks = async (jwt, page) => {
   const api = apiWrapper(jwt)
-  console.log(page)
+  trace(page)
   return await api.get(`${apiUrl}/tasks?page=${page}`)
 }
 

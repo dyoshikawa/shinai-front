@@ -6,6 +6,7 @@
 
 <script>
 import Tasks from '~/components/Tasks'
+import trace from '~/plugins/trace'
 
 export default {
   components: { Tasks },
@@ -16,10 +17,10 @@ export default {
 
   methods: {
     async changePage(page) {
-      console.log(page)
+      trace(page)
       await this.$store.dispatch('tasks/fetchTimeline', page)
-    }
-  }
+    },
+  },
 }
 </script>
 

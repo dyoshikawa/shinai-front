@@ -5,5 +5,7 @@ export const firebaseConfig = {
   databaseURL: 'https://shinai-list-development.firebaseio.com',
   projectId: 'shinai-list-development',
   storageBucket: 'shinai-list-development.appspot.com',
-  messagingSenderId: '414351129278'
+  messagingSenderId: '414351129278',
 }
+
+export const debugMode = true
