@@ -14,9 +14,13 @@
       :key="task.id"
       class="mb-2"
     >
-      <Avatar
-        :url="task.user.avatar"
-      />
+      <router-link
+        :to="`/users/${task.user.ID}`"
+      >
+        <Avatar
+          :url="task.user.avatar"
+        />
+      </router-link>
       わたしは
       &nbsp;<b>{{ task.content }}</b>&nbsp;
       をしません。

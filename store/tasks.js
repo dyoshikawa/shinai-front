@@ -1,6 +1,7 @@
 import {
   fetchAuthUserTasks,
   fetchTimelineTasks,
+  fetchUserTasks,
   createTask,
 } from '~/plugins/api'
 import trace from '~/plugins/trace'
@@ -22,6 +23,13 @@ export const actions = {
   async fetchTimeline({ commit }, page) {
     const jwt = ''
     const { data } = await fetchTimelineTasks(jwt, page)
+    trace(data)
+
+    commit('set', data)
+  },
+  async fetchUser({ commit }, { page, id }) {
+    const jwt = ''
+    const { data } = await fetchUserTasks(jwt, { page: page, id: id })
     trace(data)
 
     commit('set', data)

@@ -8,7 +8,7 @@
         class="turtle"
       >
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>

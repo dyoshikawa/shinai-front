@@ -1,15 +1,15 @@
 <template>
   <b-container>
-    <timeline-tasks/>
+    <user-tasks/>
   </b-container>
 </template>
 
 <script>
-import TimelineTasks from '~/components/TimelineTasks'
+import UserTasks from '~/components/UserTasks'
 
 export default {
   components: {
-    TimelineTasks,
+    UserTasks,
   },
 }
 </script>
