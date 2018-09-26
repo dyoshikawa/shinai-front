@@ -12,6 +12,7 @@
     <template v-for="task in tasks">
       <Task
         :key="task.ID"
+        :taskId="task.ID"
         :userId="task.user.ID"
         :avatar="task.user.avatar"
         :content="task.content"

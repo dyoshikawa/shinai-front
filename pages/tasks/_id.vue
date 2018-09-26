@@ -1,6 +1,7 @@
 <template>
   <b-container>
     <Task
+      :taskId="task.id"
       :userId="task.user.id"
       :avatar="task.user.avatar"
       :content="task.content"

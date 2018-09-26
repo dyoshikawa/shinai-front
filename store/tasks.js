@@ -12,6 +12,7 @@ export const state = () => ({
   totalCount: 0,
   perPage: 10,
   one: {
+    id: null,
     content: '',
     user: {
       id: null,
@@ -74,10 +75,11 @@ export const mutations = {
     state.perPage = limit
   },
 
-  setOne(state, { content, user }) {
+  setOne(state, { ID, content, user }) {
     trace(
       `content: ${content}, user.ID: ${user.ID}, user.avatar: ${user.avatar}`
     )
+    state.one.id = ID
     state.one.content = content
     state.one.user.id = user.ID
     state.one.user.avatar = user.avatar

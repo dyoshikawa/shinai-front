@@ -1,7 +1,6 @@
 <template>
   <b-card
     class="mb-2"
-    @click="alert('aaa')"
   >
     <router-link
       :to="`/users/${userId}`"
@@ -10,9 +9,15 @@
         :url="avatar"
       />
     </router-link>
-    わたしは
-    &nbsp;<b>{{ content }}</b>&nbsp;
-    をしません。
+
+    <router-link
+      :to="`/tasks/${taskId}`"
+      class="text-dark"
+    >
+      わたしは
+      &nbsp;<b>{{ content }}</b>&nbsp;
+      をしません。
+    </router-link>
   </b-card>
 </template>
 
@@ -25,6 +30,10 @@ export default {
   },
 
   props: {
+    taskId: {
+      type: Number,
+      require: true,
+    },
     userId: {
       type: Number,
       require: true,
