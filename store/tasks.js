@@ -14,7 +14,7 @@ export const state = () => ({
   one: {
     content: '',
     user: {
-      id: '',
+      id: null,
       avatar: '',
     },
   },
