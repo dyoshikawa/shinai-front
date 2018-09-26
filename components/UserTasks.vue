@@ -26,8 +26,8 @@ export default {
     },
   },
 
-  async created() {
-    await this.$store.dispatch('tasks/fetchUser', {
+  created() {
+    this.$store.dispatch('tasks/fetchUser', {
       page: 1,
       id: this.$route.params.id,
     })
