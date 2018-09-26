@@ -9,30 +9,23 @@
       />
     </template>
 
-    <b-card
-      v-for="task in tasks"
-      :key="task.id"
-      class="mb-2"
-    >
-      <router-link
-        :to="`/users/${task.user.ID}`"
-      >
-        <Avatar
-          :url="task.user.avatar"
-        />
-      </router-link>
-      わたしは
-      &nbsp;<b>{{ task.content }}</b>&nbsp;
-      をしません。
-    </b-card>
+    <template v-for="task in tasks">
+      <Task
+        :key="task.ID"
+        :userId="task.user.ID"
+        :avatar="task.user.avatar"
+        :content="task.content"
+      />
+    </template>
   </div>
 </template>
 
 <script>
-import Avatar from '~/components/Avatar'
+import Task from '~/components/Task'
 
 export default {
-  components: { Avatar },
+  components: { Task },
+
   computed: {
     tasks() {
       return this.$store.state.tasks.list

@@ -30,6 +30,13 @@ export const fetchUserTasks = async (jwt, { page, id }) => {
   return await api.get(`${apiUrl}/users/${id}/tasks?page=${page}`)
 }
 
+export const fetchTask = async id => {
+  trace(`id: ${id}`)
+  const jwt = ''
+  const api = apiWrapper(jwt)
+  return await api.get(`${apiUrl}/tasks/${id}`)
+}
+
 export const createTask = async (jwt, body) => {
   const api = apiWrapper(jwt)
   return await api.post(`${apiUrl}/tasks`, body)

@@ -36,7 +36,6 @@ export default {
 
   methods: {
     async changePage(page) {
-      console.log(this.$route.params.id)
       await this.$store.dispatch('tasks/fetchUser', {
         page: page,
         id: this.$route.params.id,
