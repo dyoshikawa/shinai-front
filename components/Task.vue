@@ -1,6 +1,7 @@
 <template>
   <b-card
     class="mb-2"
+    @click="alert('aaa')"
   >
     <router-link
       :to="`/users/${userId}`"

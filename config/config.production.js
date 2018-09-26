@@ -1,4 +1,5 @@
 export const apiUrl = 'https://shinai.herokuapp.com'
+
 export const firebaseConfig = {
   apiKey: 'AIzaSyCYutXXDWMnJODgQwk6LRSfHnK9QuCk_FM',
   authDomain: 'shinai-11e78.firebaseapp.com',
