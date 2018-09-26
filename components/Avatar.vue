@@ -14,7 +14,7 @@ export default {
   props: {
     url: {
       type: String,
-      required: true,
+      default: '/turtle.png',
     },
   },
 }
