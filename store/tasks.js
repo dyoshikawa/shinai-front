@@ -7,7 +7,7 @@ import {
 import trace from '~/plugins/trace'
 
 export const state = () => ({
-  list: [{ user: {} }],
+  list: [],
   totalCount: 0,
   perPage: 10,
 })

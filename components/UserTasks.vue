@@ -22,11 +22,12 @@ export default {
 
   computed: {
     user() {
-      return this.$store.state.tasks.list[0].user
+      return this.$store.state.user
     },
   },
 
-  created() {
+  async created() {
+    this.$store.dispatch('user/fetch', this.$route.params.id)
     this.$store.dispatch('tasks/fetchUser', {
       page: 1,
       id: this.$route.params.id,

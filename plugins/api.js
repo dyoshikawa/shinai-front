@@ -34,3 +34,9 @@ export const createTask = async (jwt, body) => {
   const api = apiWrapper(jwt)
   return await api.post(`${apiUrl}/tasks`, body)
 }
+
+export const fetchUser = async id => {
+  const jwt = ''
+  const api = apiWrapper(jwt)
+  return await api.get(`${apiUrl}/users/${id}`)
+}
