@@ -21,5 +21,5 @@ export function loginWithTwitter() {
 
 export async function logout(store) {
   await firebase.auth().signOut()
-  store.commit('user/set', false)
+  store.commit('authUser/set', false)
 }

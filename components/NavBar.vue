@@ -69,10 +69,10 @@ export default {
 
   computed: {
     isLogin() {
-      return this.$store.state.user.isLogin
+      return this.$store.state.authUser.isLogin
     },
     avatar() {
-      return this.$store.state.user.avatar
+      return this.$store.state.authUser.avatar
     },
   },
 

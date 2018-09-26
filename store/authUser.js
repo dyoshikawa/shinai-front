@@ -14,14 +14,14 @@ export const actions = {
 }
 
 export const mutations = {
-  set(state, user) {
-    trace(user)
-    if (!user) {
+  set(state, authUser) {
+    trace(authUser)
+    if (!authUser) {
       state.isLogin = false
     } else {
       state.isLogin = true
-      state.jwt = user.qa
-      state.avatar = user.photoURL
+      state.jwt = authUser.qa
+      state.avatar = authUser.photoURL
     }
   },
 }

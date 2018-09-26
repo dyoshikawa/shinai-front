@@ -14,7 +14,7 @@ export const state = () => ({
 
 export const actions = {
   async fetch({ commit, rootState }, page) {
-    const jwt = rootState.user.jwt
+    const jwt = rootState.authUser.jwt
     const { data } = await fetchAuthUserTasks(jwt, page)
     trace(data)
 
@@ -35,7 +35,7 @@ export const actions = {
     commit('set', data)
   },
   async add({ commit, rootState }, body) {
-    const jwt = rootState.user.jwt
+    const jwt = rootState.authUser.jwt
 
     await createTask(jwt, body)
 

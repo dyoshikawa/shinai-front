@@ -12,7 +12,7 @@ import Loading from '~/components/Loading'
 export default {
   components: { NavBar, Loading },
   async created() {
-    await this.$store.dispatch('user/fetch')
+    await this.$store.dispatch('authUser/fetch')
   },
 }
 </script>
