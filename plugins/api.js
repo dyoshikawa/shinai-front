@@ -12,6 +12,7 @@ const apiWrapper = jwt => {
   })
 }
 
+// しないこと
 export const fetchAuthUserTasks = async (jwt, page) => {
   const api = apiWrapper(jwt)
   trace(page)
@@ -42,6 +43,27 @@ export const createTask = async (jwt, body) => {
   return await api.post(`${apiUrl}/tasks`, body)
 }
 
+export const succeedTask = async (jwt, id) => {
+  const api = apiWrapper(jwt)
+  return await api.post(`${apiUrl}/tasks/${id}/succeed`)
+}
+
+export const cancelSuccessfulTask = async (jwt, id) => {
+  const api = apiWrapper(jwt)
+  return await api.put(`${apiUrl}/tasks/${id}/cancel-successful`)
+}
+
+export const failTask = async (jwt, id) => {
+  const api = apiWrapper(jwt)
+  return await api.put(`${apiUrl}/tasks/${id}/fail`)
+}
+
+export const cancelFailedTask = async (jwt, id) => {
+  const api = apiWrapper(jwt)
+  return await api.post(`${apiUrl}/tasks/${id}/cancel-failed`)
+}
+
+// ユーザ
 export const fetchUser = async id => {
   const jwt = ''
   const api = apiWrapper(jwt)

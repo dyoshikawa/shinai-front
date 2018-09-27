@@ -4,6 +4,10 @@ import {
   fetchUserTasks,
   fetchTask,
   createTask,
+  succeedTask,
+  cancelSuccessfulTask,
+  failTask,
+  cancelFailedTask,
 } from '~/plugins/api'
 import trace from '~/plugins/trace'
 
@@ -57,6 +61,50 @@ export const actions = {
     const jwt = rootState.authUser.jwt
 
     await createTask(jwt, body)
+
+    const { data } = await fetchAuthUserTasks(jwt)
+    trace(data)
+
+    commit('set', data)
+  },
+
+  async succeed({ commit, rootState }, id) {
+    const jwt = rootState.authUser.jwt
+
+    await succeedTask(jwt, id)
+
+    const { data } = await fetchAuthUserTasks(jwt)
+    trace(data)
+
+    commit('set', data)
+  },
+
+  async cancelSuccessful({ commit, rootState }, id) {
+    const jwt = rootState.authUser.jwt
+
+    await cancelSuccessfulTask(jwt, id)
+
+    const { data } = await fetchAuthUserTasks(jwt)
+    trace(data)
+
+    commit('set', data)
+  },
+
+  async fail({ commit, rootState }, id) {
+    const jwt = rootState.authUser.jwt
+
+    await failTask(jwt, id)
+
+    const { data } = await fetchAuthUserTasks(jwt)
+    trace(data)
+
+    commit('set', data)
+  },
+
+  async cancelFailed({ commit, rootState }, id) {
+    const jwt = rootState.authUser.jwt
+
+    await cancelFailedTask(jwt, id)
 
     const { data } = await fetchAuthUserTasks(jwt)
     trace(data)
