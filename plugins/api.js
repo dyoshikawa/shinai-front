@@ -45,7 +45,7 @@ export const createTask = async (jwt, body) => {
 
 export const succeedTask = async (jwt, id) => {
   const api = apiWrapper(jwt)
-  return await api.post(`${apiUrl}/tasks/${id}/succeed`)
+  return await api.put(`${apiUrl}/tasks/${id}/succeed`)
 }
 
 export const cancelSuccessfulTask = async (jwt, id) => {
@@ -60,7 +60,7 @@ export const failTask = async (jwt, id) => {
 
 export const cancelFailedTask = async (jwt, id) => {
   const api = apiWrapper(jwt)
-  return await api.post(`${apiUrl}/tasks/${id}/cancel-failed`)
+  return await api.put(`${apiUrl}/tasks/${id}/cancel-failed`)
 }
 
 // ユーザ
