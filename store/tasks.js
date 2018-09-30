@@ -25,6 +25,12 @@ export const state = () => ({
   },
 })
 
+export const getters = {
+  list: state => {
+    return state.list
+  },
+}
+
 export const actions = {
   async fetch({ commit, rootState }, page) {
     const jwt = rootState.authUser.jwt

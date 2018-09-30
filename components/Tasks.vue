@@ -29,7 +29,8 @@ export default {
 
   computed: {
     tasks() {
-      return this.$store.state.tasks.list
+      console.log(this.$store.getters['tasks/list'])
+      return this.$store.getters['tasks/list']
     },
     totalCount() {
       return this.$store.state.tasks.totalCount
